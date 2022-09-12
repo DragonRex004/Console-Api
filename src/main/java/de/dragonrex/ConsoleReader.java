@@ -3,7 +3,6 @@ package de.dragonrex;
 import de.dragonrex.command.CommandMap;
 import de.dragonrex.command.CommandResponse;
 import de.dragonrex.command.ICommand;
-import de.dragonrex.exception.CommandNotFoundException;
 import de.dragonrex.logger.ConsoleColor;
 import de.dragonrex.logger.Logger;
 
@@ -59,8 +58,10 @@ public class ConsoleReader {
                     this.logger.info("[Debug Mode] " + command.name() + " is Executed");
                     this.logger.info("[Debug Mode] Command Response -> " + response.name());
                 }
+            } else if (commandName.isBlank()) {
+
             } else {
-                throw new CommandNotFoundException("This Command is not Found in the CommandMap");
+                this.logger.error("-> The typed Command is not founded!");
             }
         }
     }
