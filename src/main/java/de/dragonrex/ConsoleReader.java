@@ -59,7 +59,7 @@ public class ConsoleReader {
                     this.logger.info("[Debug Mode] Command Response -> " + response.name());
                 }
             } else if (commandName.isBlank()) {
-
+                // empty statement is required
             } else {
                 this.logger.error("-> The typed Command is not founded!");
             }

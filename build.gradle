@@ -23,10 +23,11 @@ dependencies {
 
 jar {
     manifest {
-        attributes "Main-Class" : "eu.dragon.Application"
+        attributes "Main-Class" : "de.dragonrex.Test"
     }
 }
 
 test {
     useJUnitPlatform()
 }
+
